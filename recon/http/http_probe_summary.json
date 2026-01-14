@@ -1,0 +1,13 @@
+{
+  "module": "http_probe",
+  "stats": {},
+  "output_files": {},
+  "tools_used": [
+    "httprobe",
+    "httpx"
+  ],
+  "technologies": {},
+  "status_codes": {},
+  "server_software": {},
+  "findings_count": 0
+}

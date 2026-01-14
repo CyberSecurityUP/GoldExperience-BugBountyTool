@@ -1,0 +1,115 @@
+# ReconTool - Default Configuration
+# =================================
+# This is a sample configuration file for ReconTool.
+# Modify according to your target and requirements.
+
+# Target Configuration
+# --------------------
+target:
+  # Type: domain, url, ip, or file
+  type: domain
+  # Value: The target value (domain name, URL, IP, or path to targets file)
+  value: example.com
+
+# Scope Configuration
+# -------------------
+# Define what's in-scope and out-of-scope for reconnaissance.
+# Supports wildcards (*.example.com) and CIDR notation.
+scope:
+  in_scope:
+    - "*.example.com"
+    - "example.com"
+  out_of_scope:
+    - "*.internal.example.com"
+    - "admin.example.com"
+
+# Module Configuration
+# --------------------
+# Enable or disable specific reconnaissance modules.
+modules:
+  # Passive reconnaissance (safe, no direct interaction)
+  subdomain_enum: true      # Discover subdomains (subfinder, amass, etc.)
+  passive_sources: true     # API-based subdomain enumeration (crt.sh, RapidDNS, etc.)
+  url_collection: true      # Collect URLs from archives (gau, wayback, etc.)
+  dns_enum: true            # DNS record enumeration
+  osint: true               # Shodan, Censys lookups
+  git_recon: true           # Git repository scanning
+  cloud_enum: true          # Cloud resource enumeration
+  cert_monitoring: false    # Certificate transparency monitoring
+
+  # Active reconnaissance (sends requests to targets)
+  http_probe: true          # Probe for live HTTP services
+  crawling: true            # Web crawling and spidering
+  js_analysis: true         # JavaScript file analysis
+  parameter_discovery: true # Discover hidden parameters
+  port_scan: true           # Port scanning with naabu
+  screenshots: true         # Capture screenshots
+  reverse_dns: false        # Reverse DNS lookups
+  subdomain_takeover: true  # Check for subdomain takeover
+
+  # Vulnerability scanning (potentially intrusive)
+  nuclei_scan: true         # Nuclei template scanning with CVE checks
+  fuzzing: false            # Directory/file fuzzing
+  cors_check: true          # CORS misconfiguration detection
+  vuln_patterns: true       # LFI/SSRF/Redirect/SSTI detection
+
+  # Active testing (intrusive, only for authorized testing)
+  xss_scan: false           # XSS vulnerability testing
+  sqli_scan: false          # SQL injection testing
+
+  # Tool-specific options
+  tool_options:
+    subfinder:
+      extra_args: []
+    nuclei:
+      extra_args: ["-severity", "medium,high,critical"]
+    ffuf:
+      extra_args: []
+
+  # Timeouts per module (in seconds)
+  timeouts:
+    subdomain_enum: 600
+    amass: 900
+    nuclei_scan: 1800
+    crawling: 900
+    fuzzing: 600
+
+  # Rate limits (delay between requests in seconds)
+  rate_limits:
+    http_probe: 0.0
+    crawling: 0.1
+    fuzzing: 0.05
+    nuclei_scan: 0.0
+
+# Output Configuration
+# --------------------
+output:
+  # Base directory for all outputs
+  base_dir: recon
+  # Save raw tool outputs
+  save_raw: true
+  # Save normalized outputs
+  save_normalized: true
+  # Output format for certain files (txt, json, csv)
+  format: txt
+
+# Execution Configuration
+# -----------------------
+# Run modules in parallel (faster)
+parallel: true
+# Maximum concurrent workers
+max_workers: 5
+# Resume from previous run (skip completed steps)
+resume: true
+# Verbose output
+verbose: false
+
+# API Keys
+# --------
+# API keys for various services. Can also be set via environment variables.
+# Environment variable names: SHODAN_API_KEY, GITHUB_TOKEN, etc.
+api_keys:
+  # shodan: "your-api-key-here"
+  # github: "your-token-here"
+  # censys_id: "your-id"
+  # censys_secret: "your-secret"

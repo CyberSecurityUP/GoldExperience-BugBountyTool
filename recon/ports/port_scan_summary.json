@@ -1,0 +1,11 @@
+{
+  "module": "port_scan",
+  "stats": {},
+  "output_files": {},
+  "tools_used": [
+    "naabu"
+  ],
+  "port_distribution": {},
+  "findings_count": 0,
+  "critical_findings": 0
+}

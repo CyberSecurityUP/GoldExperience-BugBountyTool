@@ -1,0 +1,20 @@
+{
+  "module": "subdomain_enum",
+  "stats": {
+    "assetfinder_count": 1,
+    "subfinder_count": 0,
+    "amass_count": 0,
+    "testphp.vulnweb.com_passive_count": 0
+  },
+  "output_files": {
+    "testphp.vulnweb.com_all": "recon/subdomains/testphp.vulnweb.com_all.txt"
+  },
+  "tools_used": [
+    "chaos",
+    "dnsx",
+    "assetfinder",
+    "subfinder",
+    "shuffledns",
+    "amass"
+  ]
+}

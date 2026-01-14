@@ -1,0 +1,91 @@
+2026-01-14 14:42:08,882 [[32mINFO[0m] Running module: subdomain_enum
+2026-01-14 14:42:08,882 [[32mINFO[0m] ==================================================
+2026-01-14 14:42:08,882 [[32mINFO[0m] Running module: git_recon
+2026-01-14 14:42:08,882 [[32mINFO[0m] Running module: port_scan
+2026-01-14 14:42:08,882 [[32mINFO[0m] Running module: cloud_enum
+2026-01-14 14:42:08,882 [[32mINFO[0m] Running module: osint
+2026-01-14 14:42:08,882 [[32mINFO[0m] Enumerating subdomains for: testphp.vulnweb.com
+2026-01-14 14:42:08,883 [[32mINFO[0m] Running Git reconnaissance for 1 organizations
+2026-01-14 14:42:08,883 [[32mINFO[0m] Running cloud enumeration with 3 keywords
+2026-01-14 14:42:08,883 [[32mINFO[0m] Filtered 1 out-of-scope targets
+2026-01-14 14:42:08,883 [[32mINFO[0m] Running OSINT on 1 targets
+2026-01-14 14:42:08,883 [[32mINFO[0m] ==================================================
+2026-01-14 14:42:08,884 [[32mINFO[0m] ==================================================
+2026-01-14 14:42:08,884 [[32mINFO[0m] [Phase 1] Passive Enumeration
+2026-01-14 14:42:08,884 [[32mINFO[0m] Scanning 0 hosts for open ports
+2026-01-14 14:42:08,884 [[33mWARNING[0m] Tools not available: gitrob
+2026-01-14 14:42:08,884 [[32mINFO[0m] Starting metabigor against ['net', '-t']
+2026-01-14 14:42:08,884 [[33mWARNING[0m] Tools not available: cloud_enum
+2026-01-14 14:42:08,885 [[32mINFO[0m] ==================================================
+2026-01-14 14:42:08,885 [[32mINFO[0m] Starting github-subdomains against ['-d', 'vulnweb']
+2026-01-14 14:42:08,885 [[32mINFO[0m] Starting s3scanner against ['-bucket-file', 'recon/cloud/keywords.txt']
+2026-01-14 14:42:08,890 [[32mINFO[0m] Starting naabu against ['-l', 'recon/ports/targets.txt']
+2026-01-14 14:42:08,890 [[33mWARNING[0m] Tools not available: findomain
+2026-01-14 14:42:08,890 [[33mWARNING[0m] Tools not available: findomain
+2026-01-14 14:42:08,890 [[33mWARNING[0m] Tools not available: findomain
+2026-01-14 14:42:08,892 [[32mINFO[0m] Starting assetfinder against ['--subs-only', 'testphp.vulnweb.com']
+2026-01-14 14:42:08,892 [[33mWARNING[0m] Tools not available: findomain
+2026-01-14 14:42:08,892 [[32mINFO[0m] Starting subfinder against ['-d', 'testphp.vulnweb.com']
+2026-01-14 14:42:08,892 [[32mINFO[0m] Starting amass against ['enum', '-passive']
+2026-01-14 14:42:08,893 [[32mINFO[0m] Starting chaos against ['-d', 'testphp.vulnweb.com']
+2026-01-14 14:42:08,907 [[32mINFO[0m] chaos failed in 0.01s (0 results)
+2026-01-14 14:42:08,907 [[32mINFO[0m] github-subdomains failed in 0.02s (0 results)
+2026-01-14 14:42:08,907 [[32mINFO[0m] Module git_recon completed in 0.02s (success=True)
+2026-01-14 14:42:08,913 [[33mWARNING[0m] metabigor exited with code 2
+2026-01-14 14:42:08,913 [[32mINFO[0m] metabigor failed in 0.03s (0 results)
+2026-01-14 14:42:08,913 [[32mINFO[0m] Module osint completed in 0.03s (success=True)
+2026-01-14 14:42:09,018 [[33mWARNING[0m] s3scanner exited with code 2
+2026-01-14 14:42:09,018 [[32mINFO[0m] s3scanner failed in 0.13s (0 results)
+2026-01-14 14:42:09,018 [[32mINFO[0m] Module cloud_enum completed in 0.14s (success=True)
+2026-01-14 14:42:09,455 [[33mWARNING[0m] naabu exited with code 1
+2026-01-14 14:42:09,455 [[32mINFO[0m] naabu failed in 0.56s (0 results)
+2026-01-14 14:42:09,456 [[32mINFO[0m] Module port_scan completed in 0.57s (success=True)
+2026-01-14 14:42:09,804 [[32mINFO[0m] assetfinder completed in 0.91s (1 results)
+2026-01-14 14:42:09,805 [[32mINFO[0m]   assetfinder: 1 subdomains
+2026-01-14 14:42:38,640 [[32mINFO[0m] subfinder completed in 29.75s (0 results)
+2026-01-14 14:42:38,643 [[32mINFO[0m]   subfinder: 0 subdomains
+2026-01-14 14:42:39,822 [[32mINFO[0m] amass completed in 30.93s (1 results)
+2026-01-14 14:42:39,823 [[32mINFO[0m]   amass: 0 subdomains
+2026-01-14 14:42:39,823 [[32mINFO[0m]   Querying crt.sh...
+2026-01-14 14:42:40,748 [[32mINFO[0m]   crt.sh: 0 subdomains
+2026-01-14 14:42:40,750 [[32mINFO[0m] Filtered 1 out-of-scope targets
+2026-01-14 14:42:40,751 [[32mINFO[0m] [Phase 1] Found 0 unique subdomains
+2026-01-14 14:42:40,752 [[32mINFO[0m] [Phase 2] DNS Resolution
+2026-01-14 14:42:40,753 [[32mINFO[0m] Starting dnsx against ['-l', 'recon/subdomains/testphp.vulnweb.com_all.txt']
+2026-01-14 14:42:41,318 [[32mINFO[0m] dnsx completed in 0.56s (0 results)
+2026-01-14 14:42:41,320 [[32mINFO[0m] [Phase 3] HTTP Probing
+2026-01-14 14:42:41,321 [[33mWARNING[0m] Tool httpx not available, skipping
+2026-01-14 14:42:41,322 [[32mINFO[0m] Module subdomain_enum completed in 32.44s (success=True)
+2026-01-14 14:42:41,323 [[32mINFO[0m] Executing level 2: ['http_probe', 'url_collection', 'dns_enum']
+2026-01-14 14:42:41,324 [[33mWARNING[0m] Module http_probe has unmet dependencies: ['passive_sources']
+2026-01-14 14:42:41,325 [[32mINFO[0m] Running module: url_collection
+2026-01-14 14:42:41,326 [[32mINFO[0m] Running module: dns_enum
+2026-01-14 14:42:41,327 [[32mINFO[0m] Running module: http_probe
+2026-01-14 14:42:41,328 [[32mINFO[0m] ==================================================
+2026-01-14 14:42:41,328 [[32mINFO[0m] Running DNS enumeration on 1 targets
+2026-01-14 14:42:41,329 [[32mINFO[0m] Collecting URLs for 1 domains
+2026-01-14 14:42:41,330 [[32mINFO[0m] Filtered 1 out-of-scope targets
+2026-01-14 14:42:41,331 [[32mINFO[0m] ==================================================
+2026-01-14 14:42:41,331 [[32mINFO[0m] ==================================================
+2026-01-14 14:42:41,332 [[32mINFO[0m] Collecting URLs for: testphp.vulnweb.com
+2026-01-14 14:42:41,333 [[32mINFO[0m] Probing 0 targets for HTTP services
+2026-01-14 14:42:41,333 [[32mINFO[0m] ==================================================
+2026-01-14 14:42:41,334 [[32mINFO[0m] Starting gau against ['--threads', '5']
+2026-01-14 14:42:41,335 [[32mINFO[0m] Starting waybackurls against ['testphp.vulnweb.com']
+2026-01-14 14:42:41,335 [[32mINFO[0m] Starting httpx against ['-l', 'recon/http/targets.txt']
+2026-01-14 14:42:41,335 [[32mINFO[0m] Starting waymore against ['-i', 'testphp.vulnweb.com']
+2026-01-14 14:42:41,338 [[33mWARNING[0m] Tools not available: puredns, massdns
+2026-01-14 14:42:41,348 [[32mINFO[0m] Starting dnsx against ['-l', 'recon/dns/targets.txt']
+2026-01-14 14:42:41,468 [[32mINFO[0m] httpx failed in 0.13s (0 results)
+2026-01-14 14:42:41,469 [[32mINFO[0m] Starting httprobe against ['-c', '50']
+2026-01-14 14:42:41,486 [[33mWARNING[0m] httprobe exited with code 2
+2026-01-14 14:42:41,486 [[32mINFO[0m] httprobe failed in 0.02s (0 results)
+2026-01-14 14:42:41,486 [[32mINFO[0m] Module http_probe completed in 0.16s (success=True)
+2026-01-14 14:42:41,822 [[33mWARNING[0m] dnsx exited with code 1
+2026-01-14 14:42:41,822 [[32mINFO[0m] dnsx failed in 0.47s (0 results)
+2026-01-14 14:42:41,822 [[32mINFO[0m] Starting dnsgen against []
+2026-01-14 14:42:41,897 [[33mWARNING[0m] dnsgen exited with code 2
+2026-01-14 14:42:41,897 [[32mINFO[0m] dnsgen failed in 0.07s (0 results)
+2026-01-14 14:42:41,897 [[32mINFO[0m] Module dns_enum completed in 0.57s (success=True)
+2026-01-14 14:42:44,317 [[32mINFO[0m] waybackurls completed in 2.98s (11741 results)
+2026-01-14 14:42:53,944 [[32mINFO[0m] gau completed in 12.61s (0 results)

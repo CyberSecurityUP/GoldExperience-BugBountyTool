@@ -1,0 +1,30 @@
+2026-01-14 14:42:41,326 [[32mINFO[0m] Running module: dns_enum
+2026-01-14 14:42:41,327 [[32mINFO[0m] Running module: http_probe
+2026-01-14 14:42:41,328 [[32mINFO[0m] ==================================================
+2026-01-14 14:42:41,328 [[32mINFO[0m] Running DNS enumeration on 1 targets
+2026-01-14 14:42:41,329 [[32mINFO[0m] Collecting URLs for 1 domains
+2026-01-14 14:42:41,330 [[32mINFO[0m] Filtered 1 out-of-scope targets
+2026-01-14 14:42:41,331 [[32mINFO[0m] ==================================================
+2026-01-14 14:42:41,331 [[32mINFO[0m] ==================================================
+2026-01-14 14:42:41,332 [[32mINFO[0m] Collecting URLs for: testphp.vulnweb.com
+2026-01-14 14:42:41,333 [[32mINFO[0m] Probing 0 targets for HTTP services
+2026-01-14 14:42:41,333 [[32mINFO[0m] ==================================================
+2026-01-14 14:42:41,334 [[32mINFO[0m] Starting gau against ['--threads', '5']
+2026-01-14 14:42:41,335 [[32mINFO[0m] Starting waybackurls against ['testphp.vulnweb.com']
+2026-01-14 14:42:41,335 [[32mINFO[0m] Starting httpx against ['-l', 'recon/http/targets.txt']
+2026-01-14 14:42:41,335 [[32mINFO[0m] Starting waymore against ['-i', 'testphp.vulnweb.com']
+2026-01-14 14:42:41,338 [[33mWARNING[0m] Tools not available: puredns, massdns
+2026-01-14 14:42:41,348 [[32mINFO[0m] Starting dnsx against ['-l', 'recon/dns/targets.txt']
+2026-01-14 14:42:41,468 [[32mINFO[0m] httpx failed in 0.13s (0 results)
+2026-01-14 14:42:41,469 [[32mINFO[0m] Starting httprobe against ['-c', '50']
+2026-01-14 14:42:41,486 [[33mWARNING[0m] httprobe exited with code 2
+2026-01-14 14:42:41,486 [[32mINFO[0m] httprobe failed in 0.02s (0 results)
+2026-01-14 14:42:41,486 [[32mINFO[0m] Module http_probe completed in 0.16s (success=True)
+2026-01-14 14:42:41,822 [[33mWARNING[0m] dnsx exited with code 1
+2026-01-14 14:42:41,822 [[32mINFO[0m] dnsx failed in 0.47s (0 results)
+2026-01-14 14:42:41,822 [[32mINFO[0m] Starting dnsgen against []
+2026-01-14 14:42:41,897 [[33mWARNING[0m] dnsgen exited with code 2
+2026-01-14 14:42:41,897 [[32mINFO[0m] dnsgen failed in 0.07s (0 results)
+2026-01-14 14:42:41,897 [[32mINFO[0m] Module dns_enum completed in 0.57s (success=True)
+2026-01-14 14:42:44,317 [[32mINFO[0m] waybackurls completed in 2.98s (11741 results)
+2026-01-14 14:42:53,944 [[32mINFO[0m] gau completed in 12.61s (0 results)

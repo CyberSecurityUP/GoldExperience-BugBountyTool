@@ -1,0 +1,99 @@
+# ReconTool Requirements
+# ======================
+# Core dependencies for the reconnaissance framework
+
+# Configuration handling
+PyYAML>=6.0
+
+# Note: Most reconnaissance tools are external binaries that need to be
+# installed separately. Below is a reference list of tools used:
+#
+# Subdomain Enumeration:
+#   - subfinder (https://github.com/projectdiscovery/subfinder)
+#   - amass (https://github.com/owasp-amass/amass)
+#   - assetfinder (https://github.com/tomnomnom/assetfinder)
+#   - findomain (https://github.com/Findomain/Findomain)
+#   - chaos (https://github.com/projectdiscovery/chaos-client)
+#
+# HTTP Probing:
+#   - httpx (https://github.com/projectdiscovery/httpx)
+#   - httprobe (https://github.com/tomnomnom/httprobe)
+#
+# Crawling:
+#   - katana (https://github.com/projectdiscovery/katana)
+#   - gospider (https://github.com/jaeles-project/gospider)
+#   - hakrawler (https://github.com/hakluke/hakrawler)
+#   - cariddi (https://github.com/edoardottt/cariddi)
+#
+# URL Collection:
+#   - gau (https://github.com/lc/gau)
+#   - waybackurls (https://github.com/tomnomnom/waybackurls)
+#   - waymore (https://github.com/xnl-h4ck3r/waymore)
+#
+# JS Analysis:
+#   - subjs (https://github.com/lc/subjs)
+#   - linkfinder (https://github.com/GerbenJavado/LinkFinder)
+#   - secretfinder (https://github.com/m4ll0k/SecretFinder)
+#   - jsubfinder (https://github.com/ThreatUnkown/jsubfinder)
+#
+# Parameter Discovery:
+#   - arjun (https://github.com/s0md3v/Arjun)
+#   - x8 (https://github.com/Sh1Yo/x8)
+#   - paramspider (https://github.com/devanshbatham/ParamSpider)
+#
+# Fuzzing:
+#   - ffuf (https://github.com/ffuf/ffuf)
+#   - feroxbuster (https://github.com/epi052/feroxbuster)
+#
+# Port Scanning:
+#   - naabu (https://github.com/projectdiscovery/naabu)
+#
+# Vulnerability Scanning:
+#   - nuclei (https://github.com/projectdiscovery/nuclei)
+#   - jaeles (https://github.com/jaeles-project/jaeles)
+#
+# XSS:
+#   - dalfox (https://github.com/hahwul/dalfox)
+#   - xsstrike (https://github.com/s0md3v/XSStrike)
+#   - kxss (https://github.com/Emoe/kxss)
+#   - airixss (https://github.com/ferreiraklet/airixss)
+#
+# SQLi:
+#   - sqlmap (https://github.com/sqlmapproject/sqlmap)
+#   - ghauri (https://github.com/r0oth3x49/ghauri)
+#
+# DNS:
+#   - dnsx (https://github.com/projectdiscovery/dnsx)
+#   - shuffledns (https://github.com/projectdiscovery/shuffledns)
+#   - puredns (https://github.com/d3mondev/puredns)
+#   - massdns (https://github.com/blechschmidt/massdns)
+#   - dnsgen (https://github.com/ProjectAnte/dnsgen)
+#
+# Reverse DNS:
+#   - hakrevdns (https://github.com/hakluke/hakrevdns)
+#   - prips (apt install prips)
+#
+# Cloud:
+#   - cloud_enum (https://github.com/initstring/cloud_enum)
+#   - s3scanner (https://github.com/sa7mon/S3Scanner)
+#
+# Git:
+#   - trufflehog (https://github.com/trufflesecurity/trufflehog)
+#   - gitrob (https://github.com/michenriksen/gitrob)
+#   - github-subdomains (https://github.com/gwen001/github-subdomains)
+#
+# OSINT:
+#   - shodan CLI (pip install shodan)
+#   - censys CLI (pip install censys)
+#   - metabigor (https://github.com/j3ssie/metabigor)
+#
+# Screenshots:
+#   - gowitness (https://github.com/sensepost/gowitness)
+#   - eyewitness (https://github.com/RedSiege/EyeWitness)
+#
+# Certificate Monitoring:
+#   - certstream (pip install certstream)
+#
+# Installation:
+#   Most tools can be installed via go install or from releases.
+#   See each tool's repository for installation instructions.

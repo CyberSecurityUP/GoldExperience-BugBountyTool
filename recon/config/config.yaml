@@ -1,0 +1,35 @@
+target:
+  type: domain
+  value: http://testphp.vulnweb.com/
+scope:
+  in_scope:
+  - '*.http://testphp.vulnweb.com/'
+  - http://testphp.vulnweb.com/
+  out_of_scope: []
+modules:
+  subdomain_enum: true
+  http_probe: true
+  crawling: true
+  url_collection: true
+  js_analysis: true
+  parameter_discovery: true
+  fuzzing: false
+  nuclei_scan: true
+  port_scan: true
+  xss_scan: false
+  sqli_scan: false
+  cloud_enum: true
+  git_recon: true
+  osint: true
+  screenshots: true
+  cert_monitoring: false
+  dns_enum: true
+  reverse_dns: false
+output:
+  base_dir: recon
+  save_raw: true
+  save_normalized: true
+parallel: true
+max_workers: 5
+resume: true
+verbose: false
